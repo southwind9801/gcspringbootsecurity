@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>login</title>
+</head>
+<body>
+<p th:if="${param.error}">
+    用户名或密码错
+</p>
+<form th:action="@{/login}" method="post">
+    <table>
+        <tr>
+            <td>用户名：</td>
+            <td>
+                <input type="text" name="username"/>
+            </td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td>
+                <input type="password" name="password"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="登录"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
